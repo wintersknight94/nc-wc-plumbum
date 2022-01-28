@@ -55,8 +55,8 @@ minetest.register_node(modname.. ":drupe", {
 ------------------------------------------------------------------------
 minetest.register_node(modname .. ":block", {
 		description = "Plumbum Block",
-		tiles = {"nc_lode_annealed.png"},
-		color = "plum",
+		tiles = {"nc_lode_tempered.png^[brighten"},
+		color = "blueviolet",
 		groups = {
 			cracky = 2,
 			lux_absorb = 64,
