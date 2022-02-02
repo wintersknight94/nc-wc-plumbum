@@ -20,6 +20,14 @@ local trunkdef = nodecore.underride({
 }, minetest.registered_items[treetrunk] or {})
 minetest.register_node(trunkname, trunkdef)
 ------------------------------------------------------------------------
+local tbudname = modname.. ":tree_bud"
+local treetbud = "nc_tree:tree_bud"
+local tbuddef = nodecore.underride({
+	description = "Growing Plum Tree",
+	color = "magenta"
+}, minetest.registered_items[treetbud] or {})
+minetest.register_node(tbudname, tbuddef)
+------------------------------------------------------------------------
 local leafname = modname.. ":leaves"
 local treeleaf = "nc_tree:leaves"
 local leafdef = nodecore.underride({
@@ -28,6 +36,15 @@ local leafdef = nodecore.underride({
 	groups = {leaf_decay = 0}
 }, minetest.registered_items[treeleaf] or {})
 minetest.register_node(leafname, leafdef)
+------------------------------------------------------------------------
+local lbudname = modname.. ":leaves_bud"
+local treelbud = "nc_tree:leaves_bud"
+local lbuddef = nodecore.underride({
+	description = "Growing Plum Leaves",
+	color = "magenta",
+	groups = {leaf_decay = 0}
+}, minetest.registered_items[treelbud] or {})
+minetest.register_node(lbudname, lbuddef)
 ------------------------------------------------------------------------
 minetest.register_node(modname.. ":drupe", {
 		description = "Drupe",
@@ -45,7 +62,7 @@ minetest.register_node(modname.. ":drupe", {
 --		color = "blueviolet",
 		groups = {
 			snappy = 1,
-			plumby = 1,
+--			plumby = 1,
 			lux_absorb = 20
 		},
 		node_placement_prediction = "nc_items:stack",
@@ -55,8 +72,8 @@ minetest.register_node(modname.. ":drupe", {
 ------------------------------------------------------------------------
 minetest.register_node(modname .. ":block", {
 		description = "Plumbum Block",
-		tiles = {"nc_lode_tempered.png^[brighten"},
-		color = "blueviolet",
+		tiles = {"wc_plumbum.png"},
+--		color = "blueviolet",
 		groups = {
 			cracky = 2,
 			lux_absorb = 64,
